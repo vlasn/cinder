@@ -1,0 +1,45 @@
+.Settings {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  .Settings__button {
+    flex: 1 0 0;
+    width: 100%;
+    min-height: 15vh;
+    max-height: 20vh;
+    border-radius: 0;
+    border: 0 solid;
+    padding: 20px;
+    margin-bottom: 3px;
+    font-size: 1.5rem;
+    outline: 0;
+    transition: 0.1s;
+    color: white;
+    &.yes {
+      background-color: #323232;
+      &:hover {
+        background-color: #3e3e3e;
+
+      }
+    }
+    &.boys {
+      background-color: #92c2d9;
+      &:hover {
+        background-color: #91d7ff;
+      }
+    }
+    &.girls {
+      background-color: #d98195;
+      &:hover {
+        background-color: #d98da1;
+      }
+    }
+  }
+  .Settings__question {
+    @extend .Settings__button;
+    padding: 20px;
+    text-align: center;
+    flex: 0.6 0 0;
+    color: black;
+  }
+}

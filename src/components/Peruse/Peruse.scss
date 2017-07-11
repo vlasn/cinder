@@ -1,0 +1,31 @@
+.Peruse {
+  .Peruse__options-wrapper {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    .Peruse__button {
+      flex: 1 0 0;
+      border: 0;
+      padding: 10px;
+      font-size: 1.7rem;
+      text-transform: uppercase;
+      transition: 0.1s;
+      outline: 0;
+      &.yes {
+        background-color: #75ec86;
+        &:hover {
+          background-color: #b1ffc5;
+        }
+      }
+      &.no {
+        background-color: #ff7269;
+        &:hover {
+          background-color: #fd8b83;
+        }
+      }
+      &:active {
+        color: white;
+      }
+    }
+  }
+}

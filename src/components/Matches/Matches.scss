@@ -1,0 +1,28 @@
+.Matches {
+  .SingleMatch {
+    display: flex;
+    flex-direction: row;
+    background-color: #fbfbfb;
+    margin-bottom: 5px;
+    padding: 0;
+    &:hover {
+      background-color: #f4f1f1;
+    }
+    .SingleMatch__img-wrapper {
+      flex: 1 0 0;
+      padding: 0;
+      height: 100px;
+      box-sizing: border-box;
+      .SingleMatch__img {
+        height: 100px;
+      }
+    }
+    .SingleMatch__name-wrapper {
+      flex: 4 0 0;
+      font-size: 1.6rem;
+      padding: 20px 10px;
+      text-align: left;
+
+    }
+  }
+}
