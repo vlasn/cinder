@@ -1,8 +1,8 @@
-import React, {Component} from "react"
+import React from "react"
 import { connect } from "react-redux"
 import { getProfile } from "./profileActions"
 import Profile from "./ProfileLayout"
-require("./Profile.scss")
+import "./Profile.scss"
 
 const mapStateToProps = (state, ownProps) => ({
     matches: state.matches.matches,

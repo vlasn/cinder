@@ -1,7 +1,8 @@
 
 import {GETTING_PROFILE, GOT_PROFILE} from "./profileActions"
 import {MATCH_PROFILE, REJECT_PROFILE} from "../Peruse/perusalActions"
-export default function (state={
+
+export function profileReducer (state={
     loading: false,
     next: false,
 }, action) {
@@ -19,9 +20,6 @@ export default function (state={
                 loading: false,
                 next: false,
                 current: action.profile,
-                // cachedProfiles: state.cachedProfiles.indexOf(action.profile)<0 ?
-                //     [...state.cachedProfiles, action.profile] :
-                //     state.cachedProfiles
             }
         }
         case REJECT_PROFILE : {

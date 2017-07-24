@@ -2,7 +2,7 @@ import React, {Component} from "react"
 import { connect } from "react-redux"
 import { judgeProfile } from "./perusalActions"
 import Profile from "../Profile"
-require("./Peruse.scss")
+import "./Peruse.scss"
 
 class Peruse extends Component {
     constructor(props) {
@@ -10,12 +10,11 @@ class Peruse extends Component {
         this.judge = this.judge.bind(this)
     }
     judge(liked) {
-        console.log(liked, this.props.likesYou)
         this.props.judgeProfile(this.props.current, liked, this.props.current.likesYou)
     }
     render() {
         return(
-            <div className="Peruse">
+            <div className="Peruse View">
                 <div className="Peruse__profile-wrapper">
                     <Profile match={{params:{id:false}}}/>
                 </div>
@@ -33,4 +32,4 @@ const mapStateToProps = (state) => ({
     current: state.profiles.current
 })
 
-export default connect(mapStateToProps, {judgeProfile})(Peruse)
+export default connect(mapStateToProps, { judgeProfile })(Peruse)

@@ -1,6 +1,6 @@
 import React, {  Component } from "react"
 import { connect } from "react-redux"
-import { setPreference } from "./settingsActions"
+import { setPreference } from "./settingsDucks"
 
 require("./Settings.scss")
 
@@ -15,27 +15,29 @@ class Settings extends Component {
     }
     render() {
         return(
-            <div className="Settings">
+            <div className="Settings View">
                 <div className="Settings__question">Are you into boys or girls?</div>
                 <button
                     className="Settings__button boys"
                     onClick={()=>this.setPreference("boy")}
-                >Boys</button>
+                >
+                    Boys
+                </button>
                 <button
                     className="Settings__button girls"
                     onClick={()=>this.setPreference("girl")}
-                >Girls</button>
+                >
+                    Girls
+                </button>
                 <button
                     className="Settings__button yes"
                     onClick={()=>this.setPreference("both")}
-                >yes</button>
+                >
+                    yes
+                </button>
             </div>
         )
     }
 }
 
-
-const mapStateToProps = state => ({
-    currentSetting: state.preference,
-})
-export default connect(mapStateToProps, {setPreference})(Settings)
+export default connect(state => ({currentSetting: state.preference}), {setPreference})(Settings)

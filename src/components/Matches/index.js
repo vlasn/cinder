@@ -8,7 +8,7 @@ class Matches extends Component {
     }
     render() {
         return(
-            <div className="Matches">
+            <div className="Matches View">
                 {this.props.matches.length === 0 ?
                     <div>
                         Unfortunately, it doesn't look like anyone's swiped right on you yet. Their loss.

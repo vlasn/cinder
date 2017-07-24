@@ -1,0 +1,17 @@
+.Header {
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  padding: 5px 0;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  .Header-item {
+    flex: 1 0 0;
+    &.large {
+      flex: 2 0 0;
+    }
+  }
+}

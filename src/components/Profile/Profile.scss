@@ -1,26 +1,36 @@
 .Profile__wrapper {
+  position: relative;
+
   .Profile__image {
     max-width: 100%;
   }
+
   .Profile__about {
     display: block;
     padding: 5px 10px 10px 10px;
     background-color: whitesmoke;
     box-shadow: 0 0 4px rgba(1,1,1,0.2);
     font-size: 1.2rem;
+    bottom: 0;
+    left:0;
+    right:0;
+
     .Profile__header-wrapper {
       padding: 5px ;
       display: flex;
       flex-direction: row;
+
       .header-content {
         font-size: 1.5rem;
         font-weight: lighter;
         flex: 1 0 0;
+
         &:last-child {
           text-align: right;
         }
       }
     }
+
     .Profile__description {
       background-color: white;
       border-radius: 4px;

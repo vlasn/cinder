@@ -1,6 +1,6 @@
-import {MATCH_PROFILE} from "../Peruse/perusalActions"
+import { MATCH_PROFILE } from "../Peruse/perusalActions"
 
-export default function(state = {
+export function matchesReducer(state = {
     matches: []
 }, action) {
     switch(action.type) {
@@ -9,9 +9,7 @@ export default function(state = {
                 ...state,
                 matches: [...state.matches, action.profile]
             }
-
         }
-
         default : {
             return {
                 ...state
