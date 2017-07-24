@@ -1,4 +1,13 @@
 .Matches {
+
+  .Matches__none {
+    padding: 10px;
+  }
+
+  .Matches__count {
+    padding: 5px 15px;
+  }
+
   .SingleMatch {
     display: flex;
     flex-direction: row;

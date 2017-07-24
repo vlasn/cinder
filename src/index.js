@@ -1,15 +1,16 @@
 import React from "react"
 import ReactDOM from "react-dom"
 import { Provider } from "react-redux"
-import {BrowserRouter as Router, Route, Redirect, Link, Switch} from "react-router-dom"
+import {BrowserRouter as Router, Route, Redirect, Switch} from "react-router-dom"
 import Transition from "./components/Transition"
 import store from "./store"
+import Header from "./components/Header"
 import Profile from "./components/Profile"
 import Peruse from "./components/Peruse"
 import Settings from "./components/Settings"
 import Matches from "./components/Matches"
 
-require("./index.scss")
+import "./index.scss"
 
 const App = () => (
     <Router history = {history}>
