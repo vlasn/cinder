@@ -11,10 +11,12 @@ export default class Profile extends Component {
         newProps.next && this.props.getProfile(this.props.id, this.props.preference)
     }
     render() {
-        return (
-            <div className="Profile__wrapper">
-                { this.props.current && <div>
-                    <img className="Profile__image" src={this.props.current.image}/>
+        if(this.props.current) {
+            return (
+                <div className="Profile__wrapper">
+                    <div className="Profile__image-wrapper">
+                        <img className="Profile__image" src={this.props.current.image}/>
+                    </div>
                     <div className="Profile__about">
                         <div className="Profile__header-wrapper">
                             <span className="header-content">{this.props.current.name}</span>
@@ -27,13 +29,16 @@ export default class Profile extends Component {
                             Does {this.props.current.name.split(" ")[0]} like you?
                             {
                                 this.props.current.likesYou ?
-                                " THEY DO!" :
-                                " ¯\\_(ツ)_/¯"
+                                    " THEY DO!" :
+                                    " ¯\\_(ツ)_/¯"
                             }
                         </div> }
                     </div>
-                </div>}
-            </div>
-        )
+                </div>)
+        } else {
+            return (<div> ...Oh crap, something's gone wrong 😬</div>)
+        }
+
+
     }
 }

@@ -17,9 +17,9 @@ class Matches extends Component {
                     <div className="Matches__none">
                         Unfortunately, it doesn't look like anyone's swiped right on you yet. Their loss.
                     </div> :
-                    <div className="matchesList">
+                    <div className="Matches__list">
                         <div className="Matches__count">
-                             {this.props.matchCount} matches - go start the fire!
+                             {this.props.matchCount} budding flames - kindling 'em is up to you. If you know what I mean.
                         </div>
                         {this.props.matches
                             .map(item => <OneMatch {...item} key={item.id} history = {this.props.history} />)}
@@ -36,7 +36,11 @@ const OneMatch = ({image, name, id, history}) => {
     return (
         <div className="SingleMatch" onClick={navigaj}>
             <div className="SingleMatch__img-wrapper"><img className="SingleMatch__img" src={image}/></div>
-            <div className="SingleMatch__name-wrapper">{name}</div>
+            <div className="SingleMatch__name-wrapper">
+                <span className="SingleMatch__name">
+                    {name}
+                </span>
+            </div>
         </div>
     )
 }
