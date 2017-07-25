@@ -1,6 +1,6 @@
 
-import {GETTING_PROFILE, GOT_PROFILE} from "./profileActions"
-import {MATCH_PROFILE, REJECT_PROFILE} from "../Peruse/perusalActions"
+import { GETTING_PROFILE, GOT_PROFILE } from "./profileActions"
+import { MATCH_PROFILE, REJECT_PROFILE } from "../Peruse/perusalActions"
 
 export function profileReducer (state={
     loading: false,

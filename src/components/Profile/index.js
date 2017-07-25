@@ -1,4 +1,3 @@
-import React from "react"
 import { connect } from "react-redux"
 import { getProfile } from "./profileActions"
 import Profile from "./ProfileLayout"
@@ -13,4 +12,4 @@ const mapStateToProps = (state, ownProps) => ({
     next: state.profiles.next
 })
 
-export default connect(mapStateToProps, {getProfile})(Profile)
+export default connect(mapStateToProps, { getProfile })(Profile)

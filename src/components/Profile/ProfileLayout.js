@@ -1,4 +1,5 @@
-import React, {Component} from "react"
+import React, { Component } from "react"
+import PropTypes from "prop-types"
 
 export default class Profile extends Component {
     constructor(props){
@@ -36,9 +37,22 @@ export default class Profile extends Component {
                     </div>
                 </div>)
         } else {
-            return (<div> ...Oh crap, something's gone wrong 😬</div>)
+            return (<div> ...Oh crap, something's gone wrong</div>)
         }
-
-
     }
+}
+
+Profile.propTypes = {
+    current: PropTypes.shape({
+        description: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+        likesYou: PropTypes.bool.isRequired,
+        gender: PropTypes.string.isRequired,
+        image: PropTypes.string.isRequired,
+        id: PropTypes.number.isRequired,
+    }),
+    getProfile: PropTypes.func,
+    preference: PropTypes.string,
+    id: PropTypes.number
+
 }

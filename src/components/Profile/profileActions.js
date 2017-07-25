@@ -18,7 +18,7 @@ export const getProfile = (id, preference) => {
             type: GETTING_PROFILE
         })
         axios.get(baseURL)
-            .then(({data}) => {
+            .then(({ data }) => {
                 dispatch({
                     type: GOT_PROFILE,
                     profile: data
@@ -26,4 +26,4 @@ export const getProfile = (id, preference) => {
             })
             .catch(console.log)
     }
-};
+}
