@@ -1,6 +1,6 @@
-##Cinder
+## Cinder
 
-###Setup:
+### Setup:
 
 `git clone https://github.com/vlasn/cinder.git`
 
@@ -10,7 +10,7 @@
  
  Once built, check http://localhost:8080
  
-###Stuff and Things™:
+### Stuff and Things™:
 
 Hosting will be dealt with Soon™
 
