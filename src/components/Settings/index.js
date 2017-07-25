@@ -1,6 +1,7 @@
 import React, {  Component } from "react"
 import { connect } from "react-redux"
 import { setPreference } from "./settingsDucks"
+import PropTypes from "prop-types"
 
 require("./Settings.scss")
 
@@ -39,5 +40,9 @@ class Settings extends Component {
         )
     }
 }
+Settings.propTypes = {
+    setPreference: PropTypes.func.isRequired,
+    history: PropTypes.object.isRequired,
+}
 
-export default connect(state => ({currentSetting: state.preference}), {setPreference})(Settings)
+export default connect(state => ({ currentSetting: state.preference }), { setPreference })(Settings)

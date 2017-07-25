@@ -1,7 +1,7 @@
 import React from "react"
 import ReactDOM from "react-dom"
 import { Provider } from "react-redux"
-import {BrowserRouter as Router, Route, Redirect, Switch} from "react-router-dom"
+import { BrowserRouter as Router, Route, Redirect, Switch } from "react-router-dom"
 import Transition from "./components/Transition"
 import store from "./store"
 import Header from "./components/Header"
@@ -18,7 +18,7 @@ const App = () => (
             <Header/>
             <div className="View-wrapper">
                 <Route exact path="/undefined" render={()=><Redirect to="/"/>}/>
-                 <Route render={({location})=>(
+                 <Route render={({ location })=>(
                      <Transition history={history}>
                          <Switch key={location.key} location={location}>
                              <Route exact path="/matches" component={Matches}/>

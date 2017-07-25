@@ -48,11 +48,13 @@ Profile.propTypes = {
         name: PropTypes.string.isRequired,
         likesYou: PropTypes.bool.isRequired,
         gender: PropTypes.string.isRequired,
-        image: PropTypes.string.isRequired,
-        id: PropTypes.number.isRequired,
+        image: PropTypes.string.isRequired
     }),
     getProfile: PropTypes.func,
     preference: PropTypes.string,
-    id: PropTypes.number
+    id: PropTypes.oneOfType([
+        PropTypes.bool,
+        PropTypes.number
+    ]).isRequired
 
 }

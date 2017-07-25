@@ -1,8 +1,10 @@
-import React, {Component} from "react"
+import React, { Component } from "react"
 import { connect } from "react-redux"
 import { judgeProfile } from "./perusalActions"
 import Profile from "../Profile"
 import "./Peruse.scss"
+
+import PropTypes from "prop-types"
 
 class Peruse extends Component {
     constructor(props) {
@@ -16,7 +18,7 @@ class Peruse extends Component {
         return(
             <div className="Peruse View">
                 <div className="Peruse__profile-wrapper">
-                    <Profile match={{params:{id:false}}}/>
+                    <Profile match={{ params:{ id:false } }}/>
                 </div>
                 <div className="Peruse__options-wrapper">
                     <button className="Peruse__button no" onClick={()=>this.judge(false)}>Nay 😩</button>
@@ -31,5 +33,16 @@ const mapStateToProps = (state) => ({
     loading: state.profiles.loading,
     current: state.profiles.current
 })
+
+Peruse.propTypes = {
+    current: PropTypes.shape({
+        description: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+        likesYou: PropTypes.bool.isRequired,
+        gender: PropTypes.string.isRequired,
+        image: PropTypes.string.isRequired
+    }),
+    judgeProfile: PropTypes.func.isRequired
+}
 
 export default connect(mapStateToProps, { judgeProfile })(Peruse)

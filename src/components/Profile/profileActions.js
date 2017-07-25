@@ -24,6 +24,6 @@ export const getProfile = (id, preference) => {
                     profile: data
                 })
             })
-            .catch(console.log)
+            .catch(console.log("Uh-oh.."))
     }
 }

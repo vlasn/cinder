@@ -1,4 +1,3 @@
-import {MATCH_PROFILE} from "../Peruse/perusalActions"
 export const SET_PREFERENCE = "SET_PREFERENCE"
 export const SET_PREVIOUS = "SET_PREVIOUS"
 
@@ -13,7 +12,7 @@ export function settingsReducer(state={
             return { ...state, preference: action.preference }
         }
         case SET_PREVIOUS : {
-            return {...state, previous: action.route}
+            return { ...state, previous: action.route }
         }
         default : {
             return { ...state }
