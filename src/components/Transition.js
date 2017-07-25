@@ -4,7 +4,7 @@ import React from "react"
 const defaultConfig = {
     transitionName: "view",
     transitionEnterTimeout: 200,
-    transitionLeaveTimeout: 200
+    transitionLeaveTimeout: 100
 }
 
 const Transition = ({ config = defaultConfig, ...props }) => (

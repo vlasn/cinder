@@ -1,12 +1,21 @@
-## Setup:
+##Cinder
 
-git clone, npm install, npm run dev.
+###Setup:
 
-Once built, check http://localhost:8080
+`git clone https://github.com/vlasn/cinder.git`
 
-TODO:
-1) ALL the style
-2) currently displayed profile in / should not be replaced by a new one after settings are changed if gender criteria are met
-3) Most presentational components can and should be refactored to stateless functional ones.
-4) Unit tests
-5) Linting? _Linting!_
+ `npm install`
+ 
+ `npm run dev`
+ 
+ Once built, check http://localhost:8080
+ 
+###Stuff and Things™:
+
+Hosting will be dealt with Soon™
+
+Issues I've yet to fix:
+1) currently displayed profile in / should not be replaced by a new one after settings are changed if gender criteria are met
+2) Some of the CSS still feels hacky.
+3) Dummy/placeholder image displayed during loading actual image
+4) Transitions could be a lot smoother
